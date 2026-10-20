@@ -1,4 +1,4 @@
-# Physika^[Repo called physikax, only as a placeholder since the main repo is private at the moment] (Currently Under Development)
+# Physika[^1] (Currently Under Development)
 
 **Learn physics by making things move.**
 
@@ -92,3 +92,6 @@ It works as part of the Circuits course, and also as a free sandbox from the **C
 
 - Earn **XP** for every exercise you finish, and level up as it adds up.
 - Earn a **badge** for each of the 41 chapters you complete.
+
+
+[^1]: Placeholder name, the repo is private for now.
