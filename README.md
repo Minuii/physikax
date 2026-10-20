@@ -1,4 +1,4 @@
-# Physika[Repo called physikax, only as a placeholder since the main repo is private at the moment] (Currently Under Development)
+# Physika^[Repo called physikax, only as a placeholder since the main repo is private at the moment] (Currently Under Development)
 
 **Learn physics by making things move.**
 
