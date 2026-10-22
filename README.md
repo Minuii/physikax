@@ -6,7 +6,7 @@ Physika is a free physics course that runs entirely in your web browser. You rea
 
 **Try it: https://minuii.github.io/physika/**
 
-No account, no install, no ads. Open the link and start.
+Open the link and start.
 
 ---
 
@@ -20,7 +20,7 @@ Physika takes a different route. Every idea comes with something to do:
 - **You see it.** The Lab animates *your* result, not a prepared video. Change a number in your code, run it again, and the picture changes.
 - **You build it.** In the Circuit Lab you place batteries, resistors and transistors on a breadboard and measure what happens, instead of only reading about it.
 
-The aim is to make physics feel like a game you play, while still teaching it properly: real equations, real units, and answers that have been checked carefully.
+The aim is to make physics feel like a game you play, while still teaching it properly: real equations, real units, and answers that have been checked.
 
 ---
 
