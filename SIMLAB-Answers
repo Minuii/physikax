@@ -1,0 +1,165 @@
+# SimLab: challenge answers
+
+Every answer was run through the real simulation and passes its challenge. Anything not listed stays at its default. For a clean run, press **Reset**, set the values, then press **Play**.
+
+---
+
+## Cannon (50 XP)
+
+### 1. Land a shot in the bucket at 40 m (15 XP)
+| Setting | Value |
+|---|---|
+| Launch speed | **19.81 m/s** |
+| Angle | **45°** |
+| Height / Gravity / Bucket | 0 m / Earth / 40 m |
+
+*Why:* with no launch height, range = v² sin 2θ / g. At 45°, v = √(40 × 9.81) = 19.81 m/s.
+
+### 2. On Earth, reach 100 m with a launch speed under 35 m/s (15 XP)
+| Setting | Value |
+|---|---|
+| Launch speed | **32 m/s** (anything from 31.4 up to 34.9) |
+| Angle | **45°** |
+
+*Why:* 45° gives the longest range. 32² / 9.81 = 104.4 m.
+
+### 3. Hit the bucket on Mars with your first shot (20 XP)
+| Setting | Value |
+|---|---|
+| Gravity | **Mars, 3.71 m/s²** |
+| Launch speed | **12.18 m/s** |
+| Angle | **45°** |
+| Bucket | 40 m |
+
+*Why:* v = √(40 × 3.71) = 12.18 m/s. This shot also completes challenge 1.
+
+> ⚠️ Only your first Mars shot counts. If you miss, move the bucket at least 5 m away from where your shots landed, then use v = √(distance × 3.71).
+
+---
+
+## Collision track (30 XP)
+
+### 1. Make cart 1 stop dead after the collision (15 XP)
+| Setting | Value |
+|---|---|
+| Cart 1 | **2 kg, 3 m/s** |
+| Cart 2 | **2 kg, 0 m/s** |
+| Bounciness | **1 (elastic)** |
+
+*Why:* equal masses in an elastic collision swap velocities, so cart 1 takes cart 2's speed of 0.
+
+### 2. Lose half the kinetic energy, within 2% (15 XP)
+| Setting | Value |
+|---|---|
+| Cart 1 | **2 kg, 3 m/s** |
+| Cart 2 | **2 kg, 0 m/s** |
+| Bounciness | **0 (sticky)** |
+
+*Why:* the carts stick together and move at 1.5 m/s. KE goes from 9 J to 4.5 J, which is exactly half.
+
+---
+
+## Springs and pendulums (55 XP)
+
+### 1. Make the period 2.00 s, with no driving force (15 XP)
+Use either option:
+
+| Option | Settings |
+|---|---|
+| **Pendulum** | Length **0.994 m**, starting angle **5°** |
+| **Spring** | Mass **1 kg**, spring constant **9.87 N/m** |
+
+Damping and driving force stay at 0.
+
+*Why:* T = 2π√(L/g), so L = g/π² = 0.994 m. Or T = 2π√(m/k), so k = π² = 9.87 N/m. Keep the swing small: a wide pendulum swing runs slow.
+
+### 2. Resonance: swing more than 0.3 m with a drive of 1 N or less (20 XP)
+| Setting | Value |
+|---|---|
+| Mode | **Mass on a spring** |
+| Mass / Spring constant | 0.5 kg / 20 N/m |
+| Starting displacement | **0** |
+| Damping | **0.2 kg/s** |
+| Driving force | **1 N** |
+| Driving frequency | **1.007 Hz** |
+
+*Why:* the natural frequency is f₀ = (1/2π)√(k/m) = 1.007 Hz. The drive must be within 10% of it, and low damping lets the swing build up.
+
+### 3. Critical damping: stop it fastest without overshoot (20 XP)
+| Setting | Value |
+|---|---|
+| Mode | **Mass on a spring** |
+| Mass / Spring constant | 0.5 kg / 20 N/m |
+| Starting displacement | **0.2 m** (at least 0.1) |
+| Damping | **6.32 kg/s** |
+| Driving force | 0 |
+
+*Why:* critical damping is b = 2√(km) = 2√(20 × 0.5) = 6.32 kg/s. It's accepted within 5%.
+
+---
+
+## Orbit sandbox (55 XP)
+
+### 1. Circular orbit round a star of 3 suns or more (15 XP)
+| Setting | Value |
+|---|---|
+| Star mass | **4 suns** |
+| Start distance | **1 AU** |
+| Start speed | **59.57 km/s** |
+
+*Why:* circular speed is v = √(GM/r), which is 29.78 × √(M/r) km/s. Let it go once round.
+
+### 2. Period of exactly 2 years, within 1% (20 XP)
+| Setting | Value |
+|---|---|
+| Star mass | **1 sun** |
+| Start distance | **1.587 AU** |
+| Start speed | **23.64 km/s** |
+
+*Why:* Kepler's third law gives T² = a³/M, so a = 2^(2/3) = 1.587 AU. Use circular speed there, 29.78 / √1.587 = 23.64 km/s.
+
+### 3. Escape with the least extra speed (20 XP)
+| Setting | Value |
+|---|---|
+| Star mass | **1 sun** |
+| Start distance | **3 AU** |
+| Start speed | **24.6 km/s** (anything from 24.32 to 24.81) |
+| Time scale | 5 yr/s (so you don't wait as long) |
+
+*Why:* escape speed is √2 × circular speed = 42.12 / √3 = 24.32 km/s. You must reach it but stay within 2% above. The challenge completes once the planet has flown off.
+
+---
+
+## Wave on a string (55 XP)
+
+Wave speed with the defaults: v = √(T/μ) = √(4 / 0.1) = 6.32 m/s. The string is L = 2 m long.
+
+### 1. 3rd harmonic with the right end free (20 XP)
+| Setting | Value |
+|---|---|
+| What starts the wave | **Shake the left end** |
+| Right end | **Free** |
+| Driving frequency | **2.372 Hz** |
+
+*Why:* with one end free, the harmonics are fₙ = n·v/4L for odd n. f₃ = 3 × 6.32 / 8 = 2.372 Hz. Wait for the pattern to settle.
+
+### 2. A pulse comes back upright (15 XP)
+| Setting | Value |
+|---|---|
+| What starts the wave | **Pluck a pulse** |
+| Left end / Right end | **Fixed / Fixed** |
+
+*Why:* each fixed end flips the pulse upside down. Two flips bring it back upright, about 0.63 s later.
+
+### 3. Exactly 4 nodes between the ends (20 XP)
+| Setting | Value |
+|---|---|
+| What starts the wave | **Shake the left end** |
+| Right end | **Fixed** |
+| Driving frequency | **7.906 Hz** |
+
+*Why:* with both ends fixed, fₙ = n·v/2L. The 5th harmonic has 4 nodes between the ends: f₅ = 5 × 6.32 / 4 = 7.906 Hz.
+
+---
+
+**Total: 14 challenges, 245 XP.**
